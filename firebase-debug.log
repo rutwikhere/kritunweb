@@ -1,0 +1,46 @@
+[debug] [2026-02-04T22:37:02.208Z] ----------------------------------------------------------------------
+[debug] [2026-02-04T22:37:02.210Z] Command:       C:\nvm4w\nodejs\node.exe C:\Users\LOQ\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-02-04T22:37:02.210Z] CLI Version:   15.5.1
+[debug] [2026-02-04T22:37:02.210Z] Platform:      win32
+[debug] [2026-02-04T22:37:02.210Z] Node Version:  v20.19.4
+[debug] [2026-02-04T22:37:02.211Z] Time:          Thu Feb 05 2026 04:07:02 GMT+0530 (India Standard Time)
+[debug] [2026-02-04T22:37:02.211Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-04T22:37:03.353Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-04T22:37:03.354Z] > authorizing via signed-in user (rutwikwakale@gmail.com)
+[debug] [2026-02-04T22:37:03.354Z] [iam] checking project kritun-226bd for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-02-04T22:37:03.355Z] Checked if tokens are valid: true, expires at: 1770247842482
+[debug] [2026-02-04T22:37:03.355Z] Checked if tokens are valid: true, expires at: 1770247842482
+[debug] [2026-02-04T22:37:03.356Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/kritun-226bd:testIamPermissions [none]
+[debug] [2026-02-04T22:37:03.356Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/kritun-226bd:testIamPermissions  x-goog-user-project=kritun-226bd
+[debug] [2026-02-04T22:37:03.356Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/kritun-226bd:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-04T22:37:04.973Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/kritun-226bd:testIamPermissions 200
+[debug] [2026-02-04T22:37:04.973Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/kritun-226bd:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-04T22:37:04.973Z] Checked if tokens are valid: true, expires at: 1770247842482
+[debug] [2026-02-04T22:37:04.973Z] Checked if tokens are valid: true, expires at: 1770247842482
+[debug] [2026-02-04T22:37:04.973Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/kritun-226bd [none]
+[debug] [2026-02-04T22:37:05.615Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/kritun-226bd 200
+[debug] [2026-02-04T22:37:05.615Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/kritun-226bd {"projectId":"kritun-226bd","projectNumber":"27269304190","displayName":"kritun","name":"projects/kritun-226bd","resources":{"hostingSite":"kritun-226bd"},"state":"ACTIVE","etag":"1_11232ae7-cd90-4671-8229-156765bfda6b"}
+[info] 
+[info] === Deploying to 'kritun-226bd'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-02-04T22:37:05.623Z] Checked if tokens are valid: true, expires at: 1770247842482
+[debug] [2026-02-04T22:37:05.623Z] Checked if tokens are valid: true, expires at: 1770247842482
+[debug] [2026-02-04T22:37:05.623Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kritun-226bd/versions [none]
+[debug] [2026-02-04T22:37:05.623Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kritun-226bd/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-02-04T22:37:07.694Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kritun-226bd/versions 200
+[debug] [2026-02-04T22:37:07.694Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kritun-226bd/versions {"name":"projects/27269304190/sites/kritun-226bd/versions/531246c5dc34bc37","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[kritun-226bd]: beginning deploy... 
+[info] i  hosting[kritun-226bd]: found 533309 files in . 
+[debug] [2026-02-04T22:38:05.379Z] [hosting] uploading with 200 concurrency
+[debug] [2026-02-04T22:38:05.381Z] [hosting] hash cache [] not populated
+[debug] [2026-02-04T22:38:05.660Z] Error: EBUSY: resource busy or locked, open 'C:\Users\LOQ\ntuser.dat.LOG2'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-02-04T22:38:05.663Z] Error: EBUSY: resource busy or locked, open 'C:\Users\LOQ\ntuser.dat.LOG1'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-02-04T22:38:05.664Z] Error: EBUSY: resource busy or locked, open 'C:\Users\LOQ\NTUSER.DAT'
+[error] 
+[error] Error: An unexpected error has occurred.
