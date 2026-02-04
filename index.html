@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kritun</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Inter, sans-serif;
+background:#000;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* APP GLOW BACKGROUND */
+body::before,
+body::after{
+content:"";
+position:fixed;
+width:400px;
+height:400px;
+filter:blur(120px);
+z-index:-1;
+opacity:.25;
+}
+
+body::before{
+background:#b71c1c;
+top:-100px;
+right:-100px;
+}
+
+body::after{
+background:#0d47a1;
+bottom:-100px;
+left:-100px;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+background:#000;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.logo{
+font-size:22px;
+font-weight:800;
+background:linear-gradient(90deg,#ff3d3d,#2979ff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.nav a{
+color:#aaa;
+margin-left:18px;
+text-decoration:none;
+font-size:14px;
+}
+
+.nav a:hover{color:white}
+
+/* HERO */
+.hero{
+padding:70px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:38px;
+max-width:800px;
+margin:auto;
+}
+
+.hero p{
+max-width:700px;
+margin:20px auto;
+color:#bbb;
+line-height:1.6;
+}
+
+.cta{
+margin-top:25px;
+display:inline-block;
+padding:14px 28px;
+border-radius:30px;
+background:linear-gradient(180deg,#ff2a2a,#b30000);
+color:white;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 6px 20px rgba(255,0,0,0.35);
+transition:.25s;
+position:relative;
+overflow:hidden;
+}
+
+.cta:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 30px rgba(255,0,0,0.6);
+}
+
+
+/* STORIES BAR */
+.stories{
+display:flex;
+gap:12px;
+padding:12px 20px;
+overflow-x:auto;
+}
+
+.story{
+min-width:80px;
+height:100px;
+border-radius:18px;
+background:linear-gradient(135deg,#0d47a1,#b71c1c);
+display:flex;
+align-items:flex-end;
+justify-content:center;
+padding-bottom:8px;
+font-size:12px;
+}
+
+/* FEED STYLE CARD */
+.feed{
+max-width:900px;
+margin:auto;
+padding:10px 20px;
+}
+
+.card{
+margin-bottom:20px;
+padding:20px;
+border-radius:18px;
+background:linear-gradient(#141414,#0d0d0d);
+border:1px solid #111;
+position:relative;
+overflow:hidden;
+transition:.35s;
+box-shadow:
+0 10px 30px #000;
+}
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+.hero h1{
+animation:floatText 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatText{
+from{transform:translateY(0)}
+to{transform:translateY(-6px)}
+}
+
+/* glow layer */
+.card::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(120deg,transparent,#ff000022,transparent);
+opacity:0;
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-6px) scale(1.01);
+box-shadow:
+0 20px 40px #000,
+0 0 30px #ff000055;
+border-color:#ff000055;
+}
+
+.card:hover::before{
+opacity:1;
+}
+
+.card h3{
+margin:0 0 10px;
+}
+
+.card p{
+color:#aaa;
+font-size:14px;
+line-height:1.5;
+}
+
+/* SECTIONS */
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:28px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+.logo img{
+height:50px;
+animation:logoFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes logoFloat{
+from{transform:translateY(0)}
+to{transform:translateY(-4px)}
+}
+
+.impact{
+text-align:center;
+color:#bbb;
+line-height:1.7;
+max-width:900px;
+margin:auto;
+}
+.logo img{
+height:50px;
+display:block;
+}
+
+/* FOOTER */
+footer{
+padding:30px 20px;
+text-align:center;
+color:#666;
+border-top:1px solid #111;
+margin-top:50px;
+}
+
+@media(max-width:600px){
+.hero h1{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Kritun Logo">
+      </div>
+      
+<div class="nav">
+<a href="#features">Features</a>
+<a href="#impact">Impact</a>
+<a href="#">Download App</a>
+</div>
+</header>
+
+<section class="hero">
+<h1>Connect. Verify. Play. Grow.</h1>
+<p>
+Kritun helps gamers connect through verified skill, trusted communities,
+and real gameplay trials — building genuine teams and friendships worldwide.
+</p>
+
+
+<br><br>
+
+<a href="https://play.google.com/store/apps/details?id=com.techbrats.kritun&pcampaignid=web_share"
+   target="_blank"
+   class="cta">
+   Join Kritun
+</a>
+
+</section>
+
+
+<div class="feed">
+<div class="card">
+<h3>Trial Matches</h3>
+<p>Play together once to verify real skill and teamwork before joining squads.</p>
+</div>
+
+<div class="card">
+<h3>Language-Aware Discovery</h3>
+<p>Connect with teammates who speak your language for better coordination.</p>
+</div>
+</div>
+
+<section id="features">
+<h2 class="section-title">What Kritun Offers</h2>
+
+<div class="grid">
+<div class="card"><h3>Team Matching</h3><p>Teams and players connect directly.</p></div>
+<div class="card"><h3>Profile Achievements</h3><p>Showcase ranks and IDs.</p></div>
+<div class="card"><h3>Trust & Ratings</h3><p>Build verified communities.</p></div>
+<div class="card"><h3>Opportunity Matching</h3><p>Teams find ideal players.</p></div>
+</div>
+</section>
+
+<section id="impact">
+<h2 class="section-title">Innovation & Impact</h2>
+<p class="impact">
+Kritun builds trusted gaming ecosystems where skill and compatibility matter,
+helping players grow friendships and careers worldwide.
+</p>
+</section>
+
+<footer>
+© 2026 Kritun. Built for Gamers Worldwide.
+</footer>
+
+</body>
+</html>
